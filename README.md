@@ -15,13 +15,13 @@ TRUNCATE: This is used to remove all records from a table, including all spaces 
 RENAME: This is used to rename an object existing in the database.
 ```
 ## Query:
-## 1) Create a table student with the following fields name,rollno,age,address,email.
+## 1) Create a table student with the following fieds rollno,name,age,address,phoneno.
 ## SQL QUERY:
 ```
-create table student(name char(50),rollno numeric(5),age numeric(5),address varchar(100),email varchar(100));
+create table student(rollno numeric(5),name char(50),age numeric(5),address varchar(100), phoneno numeric(10));
 ```
 ## OUTPUT:
-![Screenshot 2023-10-02 124237](https://github.com/swetha1510/G2_DBMS/assets/120623583/fc85e821-1206-4c7a-9aba-b43dd1351a61)
+![Screenshot 2023-10-02 131405](https://github.com/swetha1510/G2_DBMS/assets/120623583/43aeaa17-8b8d-4947-8b5d-c109edccda05)
 
 ## 2)Change the above student table by adding another attribute department:
 ## SQL QUERY:
@@ -29,9 +29,18 @@ create table student(name char(50),rollno numeric(5),age numeric(5),address varc
  alter table student add department char(10);
 ```
 ## OUTPUT:
-![Screenshot 2023-10-02 124255](https://github.com/swetha1510/G2_DBMS/assets/120623583/8518e97a-5c06-48bb-9283-b7b6301934e8)
+![Screenshot 2023-10-02 131952](https://github.com/swetha1510/G2_DBMS/assets/120623583/49500c6b-5bad-4d9a-8fda-6a4bcb438b82)
 
-## 3)  Delete the student table using truncate keyword:
+## 3) Drop the student table:
+## SQL QUERY:
+```
+drop table student;
+```
+## OUTPUT:
+![Screenshot 2023-10-02 131752](https://github.com/swetha1510/G2_DBMS/assets/120623583/d2d94d48-f3fa-4502-8ec5-04dec39170f6)
+
+
+## 4)  Delete the student table using truncate keyword:
 ## SQL QUERY:
 ```
  truncate table student;
@@ -39,21 +48,13 @@ create table student(name char(50),rollno numeric(5),age numeric(5),address varc
 ## OUTPUT:
 ![Screenshot 2023-10-02 125023](https://github.com/swetha1510/G2_DBMS/assets/120623583/6435a8bd-33de-415c-a121-fcf226ada19f)
 
-## 4) Rename the student table to student_list:
+## 5) Rename the student table to mystudent:
 ## SQL QUERY:
 ```
-alter table student rename to student_list;
+ alter table student rename to mystudent;
 ```
 ## OUTPUT:
-![Screenshot 2023-10-02 125037](https://github.com/swetha1510/G2_DBMS/assets/120623583/3f7b8724-13e1-43f3-a909-e3898c13184b)
-
-## 5) Drop the student table:
-## SQL QUERY:
-```
-drop table student_list;
-```
-## OUTPUT:
-![Screenshot 2023-10-02 130049](https://github.com/swetha1510/G2_DBMS/assets/120623583/126a3fc1-cce0-455a-8803-444ba0ba1e7b)
+![Screenshot 2023-10-02 131413](https://github.com/swetha1510/G2_DBMS/assets/120623583/75505e97-1a87-47da-9153-140bdf60f5bb)
 
 ## RESULT:
 Thus a student database has been created and DDL queries are executed successfully.
